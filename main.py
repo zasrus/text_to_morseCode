@@ -2,7 +2,8 @@ from code import code
 
 
 def main():
-  mesg = 'the time is 12:00 e-mail dick at cd@supa.com'
+  mesg = input('Enter your message: ')
+  #mesg = 'the time is 12:00 e-mail dick at cd@supa.com'
   mesg_code = get_code(mesg.upper())
   for l in mesg_code:
     print(l, end="")
@@ -17,7 +18,7 @@ def get_code(text):
     elif letter == ' ':
       message.append('/')
     elif letter not in mcode:
-      message.append(f'/{letter}/')
+      message.append(f'/"{letter}"/')
   return message
 
 
